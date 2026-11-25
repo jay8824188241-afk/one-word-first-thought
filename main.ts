@@ -1,5 +1,7 @@
 // One Word, First Thought — writes the single word in entry.txt to /output/entry.txt.
 // Node 22, standard library only. No dependencies, no network.
+// The word is read verbatim (no trimming, no extra newline) so the sealed
+// scorer sees exactly the one word the entry file holds.
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
